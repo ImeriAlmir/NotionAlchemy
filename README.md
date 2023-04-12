@@ -2,6 +2,8 @@
 
 ### NotionAlchemy is a web application that allows the user to customise Notion widgets and then later integrate them into Notion.
 
+### Keep in mind that all widgets are still in progress
+
 ## The following widgets are already available:
 
 1.  Clock Widget
