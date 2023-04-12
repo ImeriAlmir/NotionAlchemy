@@ -12,9 +12,8 @@
 
 1. Spotify Widget
 2. Google Calendar Widget
-3. SelfDev Station Widget
-4. Weather Widget
-5. Life Progress Bar
+3. Weather Widget
+4. Life Progress Bar
 
 ## This is our tech stack:
 
