@@ -1,0 +1,21 @@
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .time {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        h2 {
+            font-size: 10rem;
+        }
+        &.dark {
+            background-color: #191919;
+            color: #ffffff;
+        }
+        &.light {
+            background-color: #ffffff;
+            color: #191919;
+        }
+    }
+}
