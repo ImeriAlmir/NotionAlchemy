@@ -15,21 +15,32 @@ const WidgetForm: React.FC = () => {
         setWidgetId(widgetElem);
     };
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setWidget((prevState) => ({ ...prevState, [name]: value }));
+    const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const { value } = event.target;
+        setWidget((prevState) => ({ ...prevState, widgetType: value }));
     };
 
+    const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const { value } = event.target;
+        setWidget((prevState) => ({ ...prevState, widgetTheme: value }));
+    };
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="widgetType">WidgetType</label>
-                    <input type="text" name="widgetType" id="widgetType" value={widget.widgetType} onChange={handleInputChange} />
+                    <label htmlFor="widgetType">Widget Type</label>
+                    <select name="widgetType" id="widgetType" value={widget.widgetType} onChange={handleTypeChange}>
+                        <option value="clock">Clock</option>
+                        <option value="pomodoro">Pomodoro</option>
+                        <option value="quote">Quote</option>
+                    </select>
                 </div>
                 <div>
-                    <label htmlFor="widgetTheme">WidgetTheme</label>
-                    <input type="text" name="widgetTheme" id="widgetTheme" value={widget.widgetTheme} onChange={handleInputChange} />
+                    <label htmlFor="widgetTheme">Widget Theme</label>
+                    <select name="widgetTheme" id="widgetTheme" value={widget.widgetTheme} onChange={handleThemeChange}>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
                 </div>
                 <button type="submit">Submit</button>
             </form>

@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./ClockWidget.scss";
 
 interface Props {
-    theme?: string;
+    widgetType?: string;
+    widgetTheme?: string;
 }
 
-const ClockWidget: React.FC<Props> = ({ theme = "dark" }) => {
+const ClockWidget: React.FC<Props> = ({ widgetTheme = "dark" }) => {
     const [time, setTime] = useState<Date>(new Date());
 
     useEffect(() => {
@@ -28,7 +29,7 @@ const ClockWidget: React.FC<Props> = ({ theme = "dark" }) => {
         return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
     };
 
-    const combinedClassNames = `time ${theme}`;
+    const combinedClassNames = `time ${widgetTheme}`;
 
     return (
         <div className="clock">

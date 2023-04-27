@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { QuoteWidget, ClockWidget, PomodoroWidget } from "./shared/components";
 import { CreateWidgetPage, AllWidgetsPage, UserPage, LoadWidgetByIdPage } from "./pages";
 

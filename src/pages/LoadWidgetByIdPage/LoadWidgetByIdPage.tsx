@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { WidgetServiceContext } from "../shared/contexts/Contexts";
-import { ClockWidget } from "../shared/components";
-import { Widget } from "../shared/models/Widget";
+import { WidgetServiceContext } from "../../shared/contexts/Contexts";
+import { ClockWidget, PomodoroWidget, QuoteWidget } from "../../shared/components";
+import { Widget } from "../../shared/models/Widget";
 const LoadWidgetByIdPage: React.FC = () => {
     let { widgetId = "a4PrsXlvQ0XjmM90bKJS" } = useParams();
 
@@ -17,7 +17,14 @@ const LoadWidgetByIdPage: React.FC = () => {
         getWidgetData();
     }, []);
 
-    return <div>{widget?.widgetType == "clock" && <ClockWidget {...widget} />}</div>;
+    return (
+        <div>
+            {widget?.widgetType == "clock" && <ClockWidget {...widget} />}
+            {widget?.widgetType == "pomodoro" && <PomodoroWidget {...widget} />}
+            {widget?.widgetType == "quote" && <QuoteWidget {...widget} />}
+
+        </div>
+    );
 };
 
 export default LoadWidgetByIdPage;

@@ -11,7 +11,12 @@ interface QuotesData {
     quotes: Quote[];
 }
 
-const QuoteWidget: React.FC = () => {
+interface Props {
+    widgetTheme?: string;
+    widgetType?: string;
+}
+
+const QuoteWidget: React.FC<Props> = ({ widgetTheme = "dark" }) => {
     const [quote, setQuote] = useState<Quote>({
         quote: quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)].quote,
         author: quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)].author,
@@ -25,8 +30,10 @@ const QuoteWidget: React.FC = () => {
         return () => clearInterval(intervalId);
     }, []);
 
+    const combinedClassNames = `quote ${widgetTheme}`;
+
     return (
-        <div className="quote">
+        <div className={combinedClassNames}>
             <blockquote>
                 <p>{quote.quote}</p>
             </blockquote>

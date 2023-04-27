@@ -1,10 +1,10 @@
 import React from "react";
-import { ClockWidget, PomodoroWidget, QuoteWidget } from "../shared/components";
+import { ClockWidget, PomodoroWidget, QuoteWidget } from "../../shared/components";
 
 const AllWidgetsPage: React.FC = () => {
     return (
         <div>
-            <ClockWidget theme="dark"></ClockWidget>
+            <ClockWidget widgetTheme="dark"></ClockWidget>
             <PomodoroWidget></PomodoroWidget>
             <QuoteWidget></QuoteWidget>
         </div>
