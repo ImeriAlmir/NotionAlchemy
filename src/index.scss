@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+element {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    font-weight: bold;
+    &.dark {
+        background-color: $dark;
+        color: $light;
+    }
+    &.light {
+        background-color: $light;
+        color: $dark;
+    }
+}
+
 body {
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
         'Segoe UI Symbol';
@@ -32,4 +46,8 @@ body {
 .center {
     align-items: center;
     justify-content: center;
+}
+
+.text-center {
+    text-align: center;
 }

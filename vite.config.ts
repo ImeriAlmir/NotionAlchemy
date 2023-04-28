@@ -5,5 +5,8 @@ import dotenv from "dotenv";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    server: {
+        port: 8000
+    },
     plugins: [react(), sass(), dotenv.config()],
 });
