@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { QuoteWidget, ClockWidget, PomodoroWidget } from "./shared/components";
 import { CreateWidgetPage, AllWidgetsPage, UserPage, LoadWidgetByIdPage } from "./pages";
 
@@ -10,7 +10,7 @@ const App = () => {
                 <Routes>
                     <Route path="" Component={AllWidgetsPage}></Route>
                     <Route path="/user" Component={UserPage}></Route>
-                    <Route path="/clock" element={<ClockWidget theme="light" />}></Route>
+                    <Route path="/clock" element={<ClockWidget widgetTheme="light" />}></Route>
                     <Route path="/pomodoro" Component={PomodoroWidget}></Route>
                     <Route path="/quotes" Component={QuoteWidget}></Route>
                     <Route path="/create" Component={CreateWidgetPage}></Route>

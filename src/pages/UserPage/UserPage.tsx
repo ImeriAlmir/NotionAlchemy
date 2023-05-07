@@ -1,5 +1,5 @@
 import React from "react";
-import UserForm from "../shared/components/UserForm/UserForm";
+import UserForm from "../../shared/components/UserForm/UserForm";
 
 const UserPage: React.FC = () => {
     return (

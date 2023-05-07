@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./PomodoroWidget.scss";
 
 interface PomodoroWidgetProps {
+    widgetTheme?: string;
+    widgetType?: string;
     duration?: number;
 }
 
-const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({ duration = 50 }) => {
+const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({ duration = 50, widgetTheme = "dark" }) => {
     const [timeRemaining, setTimeRemaining] = useState(duration * 60);
     const [timerRunning, setTimerRunning] = useState(false);
 
@@ -40,8 +42,10 @@ const PomodoroWidget: React.FC<PomodoroWidgetProps> = ({ duration = 50 }) => {
         setTimerRunning(false);
     };
 
+    const combinedClassNames = `pomodoro-timer ${widgetTheme}`;
+
     return (
-        <div className="pomodoro-timer">
+        <div className={combinedClassNames}>
             <div className="time-display">
                 <h2>
                     {minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}
