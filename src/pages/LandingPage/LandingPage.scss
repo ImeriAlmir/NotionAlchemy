@@ -1,0 +1,37 @@
+@import '../../styling/variables.scss';
+
+.content-container {
+    height: 100vh;
+    .left-container {
+        width: 65%;
+        .title-container {
+            font-size: 90px;
+            margin-inline: 0;
+            margin-block: 0;
+            .title {
+                text-shadow: 10px 10px black;
+            }
+        }
+        .slogan-container {
+            font-size: 40px;
+            color: $lightgray;
+        }
+    }
+    .right-container {
+        width: 35%;
+        margin-right: 80px;
+        .button {
+            background-color: lighten($color: $dark, $amount: 10);
+            border: 2px solid rgb(172, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            margin-top: 50px;
+            &:hover {
+                background-color: darken($color: $dark, $amount: 2); // darken the background color on hover
+            }
+        }
+    }
+}
