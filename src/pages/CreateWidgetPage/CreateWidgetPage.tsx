@@ -1,13 +1,27 @@
 import React from "react";
-import { WidgetForm } from "../../shared/components";
 import "./CreateWidgetPage.scss";
+import clockImage from "../../assets/images/digital_clock.png";
+import { Card } from "../../shared/components";
+import { Header } from "../../shell/components";
+
+let altText = "Clock Image";
 
 const CreateWidgetPage: React.FC = () => {
     return (
-        <div className="widgetPage flex center">
-            <div className="container">
-                <h1>create your custom widgets</h1>
-                <WidgetForm></WidgetForm>
+        <div className="widgetPage flex center column">
+            <Header />
+            <div className="row flex">
+                <Card imageUrl={clockImage} imageAltText={altText} />
+                <Card imageUrl={clockImage} imageAltText={altText} />
+                <Card imageUrl={clockImage} imageAltText={altText} />
+            </div>
+            <div className="row flex">
+                <Card imageUrl={clockImage} imageAltText={altText} />
+                <Card imageUrl={clockImage} imageAltText={altText} />
+                <Card imageUrl={clockImage} imageAltText={altText} />
+            </div>
+            <div className="row flex">
+                <Card imageUrl={clockImage} imageAltText={altText} />
             </div>
         </div>
     );

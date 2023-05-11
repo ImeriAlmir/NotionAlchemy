@@ -1,7 +1,9 @@
 .widgetPage {
-    h1 {
-        font-size: 6rem;
-        text-align: center;
-        text-transform: uppercase;
+    background-color: white;
+    color: black;
+    .row {
+        width: 1152px;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }
