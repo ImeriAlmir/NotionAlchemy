@@ -1,6 +1,8 @@
+@import '../../styling/variables.scss';
+
 .widgetPage {
-    background-color: white;
-    color: black;
+    background-color: darken($light, 0.5);
+    color: $dark;
     .row {
         width: 1152px;
         margin-top: 1rem;

@@ -8,6 +8,7 @@
     border-color: black;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     margin-bottom: 30px;
+    background-color: $light;
     .card-body {
         height: 100%;
         .card-header {
@@ -35,7 +36,7 @@
             .card-button-container {
                 padding-top: 1.5rem;
                 .card-button {
-                    background-color: $pink;
+                    background-color: lighten($void, 10);
                     color: $light;
                     border-style: none;
                     border-radius: 9999px;
