@@ -13,3 +13,13 @@ export const copyToClipBoard = (elementId: string) => {
         console.error(`Element with ID ${elementId} not found`);
     }
 };
+
+export const widgetCategories = [
+    'All',
+    'Clock',
+    'Timers',
+    'Quotes',
+    'Music',
+    'Weather',
+    'Calendar'
+];

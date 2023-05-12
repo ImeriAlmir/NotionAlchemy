@@ -9,11 +9,12 @@ interface Props {
     imageAltText: string;
     widgetName?: string;
     widgetDescription?: string;
+    widgetCategory?: string;
 }
 
-const Card: React.FC<Props> = ({ imageUrl, imageAltText, widgetName, widgetDescription }) => {
+const Card: React.FC<Props> = ({ imageUrl, imageAltText, widgetName, widgetDescription, widgetCategory }) => {
     return (
-        <div className="card">
+        <div className="card" data-widgetcategory={widgetCategory}>
             <div className="card-body">
                 <div className="card-header flex column center">
                     <div className="card-image-container">
@@ -29,9 +30,7 @@ const Card: React.FC<Props> = ({ imageUrl, imageAltText, widgetName, widgetDescr
                     </div>
                     <div className="card-button-container">
                         <button className="card-button">
-                            <i>
-                                <FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon>
-                            </i>
+                            <i><FontAwesomeIcon icon={faWandMagicSparkles}></FontAwesomeIcon></i>
                             <span>Create</span>
                         </button>
                     </div>

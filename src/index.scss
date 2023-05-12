@@ -51,6 +51,10 @@ body {
     flex-direction: column;
 }
 
+.row {
+    flex-direction: row;
+}
+
 .center {
     align-items: center;
     justify-content: center;
@@ -58,4 +62,10 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
 }
