@@ -1,7 +1,11 @@
+@import '../../styling/variables.scss';
+
 .widgetPage {
-    h1 {
-        font-size: 6rem;
-        text-align: center;
-        text-transform: uppercase;
+    background-color: darken($light, 0.5);
+    color: $dark;
+    .row {
+        width: 1152px;
+        margin-top: 1rem;
+        flex-wrap: wrap;
     }
 }
