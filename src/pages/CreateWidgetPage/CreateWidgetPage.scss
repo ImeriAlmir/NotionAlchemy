@@ -1,11 +1,1 @@
 @import '../../styling/variables.scss';
-
-.widgetPage {
-    background-color: darken($light, 0.5);
-    color: $dark;
-    .row {
-        width: 1152px;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-    }
-}
